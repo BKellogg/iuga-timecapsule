@@ -1,7 +1,7 @@
 startMySQL() {
     if [ "$(docker ps -aq --filter name=mysql)" ]; then
-		docker rm -f mysql
-	fi
+        docker rm -f mysql
+    fi
 
     docker run -d \
     -p 3306:3306 \
