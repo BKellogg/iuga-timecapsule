@@ -1,0 +1,27 @@
+.header {
+    background-color: #4b2e83;
+    color: #ffffff;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.title {
+    font-weight: 100;
+}
+
+.input-field label {
+    color: #85754d;
+}
+
+.btn {
+    background-color: #4b2e83;
+}
+
+#form_graddate:focus, #form_netid:focus, #form_message:focus, #form_netid:focus, #form_graddate:focus {
+    border-color: #85754d;
+    box-shadow: 0 1px 0 0 #85754d;
+}
+
+#form-netid:focus + label {
+    color: #85754d;
+}
