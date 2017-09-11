@@ -7,6 +7,7 @@ import (
 	"net/http"
 
 	"github.com/BKellogg/iuga-timecapsule/tc-server/models"
+	"github.com/BKellogg/iuga-timecapsule/tc-server/utils"
 )
 
 // HandleNewTimeCapsule handles a new submission of a time capsule
@@ -47,10 +48,10 @@ func (ctx *HandlerContext) HandleNewTimeCapsule(w http.ResponseWriter, r *http.R
 	}
 
 	// send a success email with the message the user sent in
-	// if err = utils.SendSuccessEmail(ctx.GmailService, capsule); err != nil {
-	// 	http.Error(w, "error sending confirmation email"+err.Error(), http.StatusInternalServerError)
-	// 	return
-	// }
+	if err = utils.SendSuccessEmail(ctx.GmailService, capsule); err != nil {
+		http.Error(w, "error sending confirmation email"+err.Error(), http.StatusInternalServerError)
+		return
+	}
 
 	w.Header().Add("Content-Type", "application/json")
 
