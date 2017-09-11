@@ -13,3 +13,9 @@
 # Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
 .glide/
 .DS_Store
+<<<<<<< Updated upstream
+=======
+mysql
+tls/
+client_secret.json
+>>>>>>> Stashed changes

@@ -1,0 +1,58 @@
+p {
+    display: inline-block;
+}
+.header {
+    background-color: #4b2e83;
+    color: #ffffff;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.title {
+    font-weight: 100;
+}
+
+.success-title {
+    font-size: 2em;
+    font-weight: 100;
+}
+
+.input-field label {
+    color: #85754d;
+}
+
+.btn {
+    background-color: #4b2e83;
+}
+
+.status-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.status-error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.status {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.hidden {
+    display: none;
+}
+
+#form_graddate:focus, #form_netid:focus, #form_message:focus, #form_netid:focus, #form_graddate:focus {
+    border-color: #85754d;
+    box-shadow: 0 1px 0 0 #85754d;
+}
+
+#form-netid:focus + label {
+    color: #85754d;
+}

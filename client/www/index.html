@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>IUGA TimeCapsule</title>
+</head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <h2 class="title">IUGA TimeCapsule</h2>
+            </div>
+        </div>
+        <div class="container page-content">
+            <div class="row">
+                <form class="tc-form col s12">
+                    <div class="row">
+                        <div class="input-field col s12 m12 l6">
+                            <input id="form_netid" type="text" class="tc-input">
+                            <label id="form_netid_label" for="form_netid">NetID</label>
+                        </div>
+                        <div class="input-field col s12 m12 l6">
+                            <input id="form_graddate" type="text" class="tc-input datepicker">
+                            <label id="form_graddate_label" for="form_graddate">Estimated Graduation Date</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea maxlength="500" id="form_message" class="tc-input materialize-textarea"></textarea>
+                            <label id="form_message_label" for="form_message">Your Message</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="js-errorbox status status-error hidden"></div>
+                        <div class="input-field col s12 center">
+                            <button type="submit" class="waves-effect waves-light btn" id="form_submit">Send TimeCapsule</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="row success-info center">
+                    <div class="js-successbox status status-success hidden">
+                        <div class="success-title">Everything looks good!</div>
+                        <div class="success-body-header">
+                            <p>We'll email your message back to you on &nbsp;<p class="success-date"></p>!</p>
+                        </div>
+                        <div class="success-body-message">We've also emailed you a confirmation to &nbsp;<p class="success-email"></p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="js/main.js"></script>
+</html>
