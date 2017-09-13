@@ -1,6 +1,6 @@
 "use strict";
 
-const CAPSULE_URL = 'https://' + 'localhost:4000' + '/capsule';
+const CAPSULE_URL = 'https://' + 'iuga-tc.brendanjkellogg.com' + '/capsule';
 
 var netidInput = $('#form_netid');
 var gradDateInput = $('#form_graddate');
@@ -8,9 +8,8 @@ var messageInput = $('#form_message');
 var tcForm = $('.tc-form');
 var errorBox = $('.js-errorbox');
 
+// prepopulate the date field with a value that is accurate for most people
 gradDateInput.val('15 June, 2019');
-netidInput.val('brendan6');
-messageInput.val('my test message');
 
 $('.datepicker').pickadate({
     selectMonths: true, // Creates a dropdown to control month

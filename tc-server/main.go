@@ -57,7 +57,7 @@ func main() {
 	}
 	mysqlDB := os.Getenv("MYSQLDB")
 	if len(mysqlDB) == 0 {
-		log.Fatal("no MYSQLPASS environment variable set, please set a MYSQLDB")
+		log.Fatal("no MYSQLDB environment variable set, please set a MYSQLDB")
 	}
 
 	// Reads in our credentials
@@ -113,6 +113,10 @@ func main() {
 // fatally logs if there was an error opening the connection
 func openMySQLConnectionOrStop(user, password, addr, dbName string) *sql.DB {
 	db, err := sql.Open("mysql", fmt.Sprintf("%s:%s@tcp(%s)/%s", user, password, addr, dbName))
+	if err != nil {
+		log.Fatal("error opening connection to mysql: " + err.Error())
+	}
+	err = db.Ping()
 	if err != nil {
 		log.Fatal("error opening connection to mysql: " + err.Error())
 	}
